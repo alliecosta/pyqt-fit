@@ -495,7 +495,7 @@ class KDE1DMethod(object):
             return integrate.quad(pdf, low, sp[i])[0]
 
         parts = np.empty(sp.shape, dtype=float)
-        comp_cdf(np.arange(len(sp)), out=parts)
+        comp_cdf(np.arange(len(sp)), out=parts,casting='unsafe')
 
         ints = parts.cumsum()
 
