@@ -1,6 +1,11 @@
 ========
 PyQt-Fit
 ========
+ahc - updates May 2023
+Updated np.unicode -> np.unicode_ for numpy > 1.20
+Updated call with np.frompyfunc for comp_cdf with casting='unsafe', as func returns an object type
+Updated inspect.getargspec to inspect.getfullargspec, as the previous was deprecated
+
 
 Trey Wenger - updates January 2020
 Changed all occurances of
