@@ -31,12 +31,12 @@ def make_ufunc(nin = None, nout=1):
     you know the wanted type for the output.
 
     :param int nin: Number of input. Default is found by using
-        ``inspect.getargspec``
+        ``inspect.getfullargspec``
     :param int nout: Number of output. Default is 1.
     """
     def f(fct):
         if nin is None:
-            Nin = len(inspect.getargspec(fct).args)
+            Nin = len(inspect.getfullargspec(fct).args)
         else:
             Nin = nin
         return np.frompyfunc(fct, Nin, nout)
